@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Attendance Management System</h1>
+    </header>
+    <main class="container">
+        <form id="attendance-form">
+            <label for="subject-name">Subject Name:</label>
+            <input type="text" id="subject-name" required>
+            
+            <label for="student-name">Student Name:</label>
+            <input type="text" id="student-name" required>
+
+            <label for="class-name">Class Name:</label>
+            <input type="text" id="class-name" required>
+          
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <button type="button" onclick="markAttendance()">Mark Attendance</button>
+        </form>
+        
+        <table id="attendance-table">
+            <thead>
+                <tr>
+                    <th>Subject Name</th>
+                    <th>Student Name</th>
+                    <th>Class Name</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="attendance-body"></tbody>
+        </table>
+    </main>
+</footer>
+<div class="mode-toggle" onclick="toggleMode()">
+    <span id="mode-icon" class="mode-icon">🌙</span>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
